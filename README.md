@@ -3,12 +3,31 @@
 Laravel練習用のリポジトリ
 
 laradockを使用してDocker Toolbox上に構築する。  
-http://192.168.99.100/
 
-# Docker関連
+localhost:  
+http://192.168.99.100/  
+phpmyadmin:  
+http://192.168.99.100:8080/
 
-* bin配下のbatファイルはリポジトリのルートディレクトリから実行する。
-* windows named pipe error が発生した場合、下記を実行する。
-```
-docker-machine env default --shell powershell | Invoke-Expression
-```
+# Laravel
+
+## Migration
+※ 基本的に以下のコマンドはworkspace内で実行する。
+
+* Migrationファイルのテンプレートを生成する。
+`php artisan make:migration <create_tasks_table> --create=<tasks>`
+
+* Migration 実行  
+`php artisan migrate`  
+※ laravel5.5以前は`migration`?
+
+# Docker
+
+* windows named pipe error が発生した場合、下記を実行する。  
+``docker-machine env default --shell powershell | Invoke-Expression``
+
+# MySQL
+
+host : `192.168.99.100`  
+user : `homestead`  
+pass : `secret`  
