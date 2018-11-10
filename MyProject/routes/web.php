@@ -1,5 +1,8 @@
 <?php
 
+use App\Task;
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +16,10 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::post('/task', function (Request $request) {
+});
+
+Route::delete('/task/{task}', function (Task $task) {
 });
